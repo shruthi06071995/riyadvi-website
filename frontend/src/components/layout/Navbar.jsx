@@ -17,7 +17,7 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-black text-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-gradient-to-br from-black via-gray-900 to-black text-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
         {/* Logo */}
