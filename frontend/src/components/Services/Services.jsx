@@ -1,5 +1,6 @@
 import { FaLaptopCode, FaMobileAlt, FaCloud, FaRobot, FaShieldAlt, FaChartLine, FaPalette, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const services = [
     {
@@ -116,7 +117,7 @@ function Services() {
 
                                 <div className="group w-16 h-16 rounded-xl bg-blue-100 flex items-center justify-center mb-6 mx-auto group-hover:bg-blue-600 transition-all duration-300">
 
-                                    <service.icon className="group text-3xl text-blue-600 group-hover:text-white" />
+                                    <service.icon className="group text-3xl text-blue-600 group-hover:text-white group-hover:rotate-15" />
 
                                 </div>
 
@@ -152,12 +153,12 @@ function Services() {
                     viewport={{ once: true }}
                     className="text-center mt-16">
 
-                    <button className="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-blue-700 hover:scale-105 shadow-lg hover:shadow-xl">
+                    <Link to="/services" className="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-blue-700 hover:scale-105 shadow-lg hover:shadow-xl" >
 
                         View All Services
-
                         <FaArrowRight />
-                    </button>
+
+                    </Link>
 
                 </motion.div>
 

@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -47,9 +48,13 @@ function Navbar() {
             </NavLink>
           ))}
 
-          <button className="bg-yellow-500 text-black font-semibold px-5 py-2 rounded-lg hover:bg-yellow-400 transition duration-300">
+          <Link to="/contact" className="bg-yellow-500 text-black font-semibold px-5 py-2 rounded-lg hover:bg-yellow-400 transition duration-300">
+
             Book a Free Consultation
-          </button>
+
+          </Link>
+
+
 
         </div>
 
