@@ -36,9 +36,9 @@ const projects = [
             "Tailwind CSS"
         ],
         github:
-            "https://github.com/shruthi06071995/riyadvi-website",
+            "https://github.com/shruthi06071995/riyadvi-website/tree/main",
         live:
-            "https://famms-app.vercel.app/"
+            "https://riyadvi-website-revamp.onrender.com/"
     }
 ]
 
