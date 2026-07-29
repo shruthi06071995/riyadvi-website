@@ -34,20 +34,65 @@ function Contact() {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [successMessage, setSuccessMessage] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
 
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
 
-        console.log(data);
+        try {
 
-        setSuccessMessage("Your message has been sent successfully!");
+            const response = await fetch("http://localhost:5000/api/contact", {
 
-        reset();
+                method: "POST",
 
-        setTimeout(() => {
+                headers: {
+
+                    "Content-Type": "application/json"
+
+                },
+
+                body: JSON.stringify(data),
+
+            });
+
+            if (!response.ok) {
+
+                throw new Error("Request failed");
+
+            }
+
+            const result = await response.json();
+
+            if (result.success) {
+
+                setSuccessMessage("Your message has been sent successfully!");
+
+                setErrorMessage("");
+
+                reset();
+
+                setTimeout(() => {
+
+                    setSuccessMessage("");
+
+                }, 3000);
+
+            }
+
+        } catch (error) {
+
+            console.log(error);
+
+            setErrorMessage("Something went wrong. Please try again");
 
             setSuccessMessage("");
 
-        }, 3000);
+            setTimeout(() => {
+
+                setErrorMessage("");
+
+            }, 3000);
+
+        }
 
     };
 
@@ -271,6 +316,16 @@ function Contact() {
                                         {successMessage}
 
                                     </div>
+
+                                )}
+
+                                {errorMessage && (
+
+                                    <p className="text-red-700">
+
+                                        {errorMessage}
+
+                                    </p>
 
                                 )}
 
