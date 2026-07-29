@@ -22,7 +22,7 @@ function Navbar() {
   const handleLogout = () => {
     localStorage.removeItem("token");
     alert("Logged out successfully");
-    window.location.href = "/";
+    navigate("/");
   };
 
   return (
@@ -30,13 +30,15 @@ function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
         {/* Logo */}
-        <div>
+        <Link to="/">
+
           <img
             src={logo}
             alt="Company Logo"
             className="h-12 w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
           />
-        </div>
+
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">

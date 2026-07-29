@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FaMapMarkedAlt, FaPhoneAlt, FaEnvelope, FaClock, FaMapMarkerAlt } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import BASE_URL from "../../api/api.js";
 
 const contactDetails = [
     {
@@ -40,7 +41,7 @@ function Contact() {
 
         try {
 
-            const response = await fetch("http://localhost:5000/api/contact", {
+            const response = await fetch(`${BASE_URL}/contact`, {
 
                 method: "POST",
 

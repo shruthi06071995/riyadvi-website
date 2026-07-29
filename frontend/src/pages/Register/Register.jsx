@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Register.css";
 import { useNavigate } from "react-router-dom";
+import BASE_URL from "../../api/api";
 
 function Register() {
 
@@ -14,7 +15,7 @@ function Register() {
         e.preventDefault();
 
         try {
-            const response = await fetch("http://localhost:5000/api/users/register", {
+            const response = await fetch(`${BASE_URL}/users/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -29,15 +30,19 @@ function Register() {
             const data = await response.json();
 
             if (response.ok) {
+
                 alert(data.message);
 
                 setName("");
                 setEmail("");
                 setPassword("");
-            } else {
-                alert(data.message);
 
                 navigate("/login");
+
+            } else {
+
+                alert(data.message);
+
             }
         } catch (error) {
             console.error(error);
