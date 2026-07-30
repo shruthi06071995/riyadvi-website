@@ -4,13 +4,32 @@ import { Link } from "react-router-dom";
 
 function Hero() {
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-white via-gray-50 to-yellow-50">
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-amber-50">
+
+            {/* Background Grid */}
+            <div className="absolute inset-0 opacity-5">
+                <div className="h-full w-full bg-[radial-gradient(circle,#000_1px,transparent_1px)] [background-size:35px_35px]"></div>
+            </div>
 
             {/* Yellow Glow  */}
-            <div className="absolute top-0 left-0 w-72 h-72 bg-yellow-500/10 blur-3xl rounded-full"></div>
+            <div className="absolute -top-24 -left-24 w-[450px] h-[450px] bg-yellow-400/20 blur-[140px] rounded-full"></div>
 
             {/* Blue Glow  */}
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 blur-3xl rounded-full"></div>
+            <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] bg-blue-500/15 blur-[160px] rounded-full"></div>
+
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-5">
+
+                <div
+                    className="w-full h-full"
+                    style={{
+                        backgroundImage:
+                            "radial-gradient(circle, #000 1px, transparent 1px)",
+                        backgroundSize: "35px 35px",
+                    }}
+                ></div>
+                
+            </div>
 
             {/* Main Container  */}
             <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -25,8 +44,23 @@ function Hero() {
                         transition={{ duration: 0.8 }}
                     >
 
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1 }}
+                            className="inline-flex items-center gap-2 bg-white shadow-xl rounded-full px-5 py-2 border border-yellow-200"
+                        >
+
+                            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+
+                            <span className="text-sm font-medium">
+                                Trusted by Businesses Since 2021
+                            </span>
+
+                        </motion.div>
+
                         <motion.p
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
                             className="text-yellow-500 font-semibold uppercase tracking-wider">
