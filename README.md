@@ -32,6 +32,10 @@ A full-stack web application built to deliver a responsive and user-friendly exp
 
 ## 📁 Project Structure
 
+## 📸 Screenshots
+
+![Home](./screenshots/home.png)
+![Login](./screenshots/login.png)
 
 ---
 
