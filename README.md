@@ -34,8 +34,8 @@ A full-stack web application built to deliver a responsive and user-friendly exp
 
 ## 📸 Screenshots
 
-![Home](./screenshot/home.png)
-![Login](./screenshot/login.png)
+![Home](./screenshots/home.png)
+![Login](./screenshots/login.png)
 
 ---
 
