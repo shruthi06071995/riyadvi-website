@@ -35,19 +35,9 @@ A full-stack web application built to deliver a responsive and user-friendly exp
 
 ---
 
-## 📸 Screenshots
-
-## Home Page 
-(!home)(./screenshot/home.png)
-
-## Login Page
-(!login)(./screenshot/login.png)
-
----
-
 ## 🔗 Live Demo
 
-👉 (Add your deployed link here if available)
+👉 ((https://riyadvi-website-revamp.onrender.com/))
 
 ---
 
