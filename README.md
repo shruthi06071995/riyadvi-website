@@ -34,15 +34,14 @@ A full-stack web application built to deliver a responsive and user-friendly exp
 
 ## 📸 Screenshots
 
-![Home](./screenshots/home.png)
-![Login](./screenshots/login.png)
+![Home](./screenshot/home.png)
+![Login](./screenshot/login.png)
 
 ---
 
 ## 🔗 Live Demo
 
-👉 ((https://riyadvi-website-revamp.onrender.com/))
-
+👉 https://riyadvi-website-revamp.onrender.com/
 ---
 
 ## ⚙️ Installation & Setup
